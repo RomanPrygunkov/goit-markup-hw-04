@@ -27,6 +27,17 @@ body {
     /* outline: 1px solid red; */
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .no-top-padding {
     padding-top: 0;
     padding-bottom: 94;
@@ -77,10 +88,6 @@ li {
     color: var(--primary-text-color);
 }
 
-.header-hide {
-    display: none;
-}
-
 
 /* Header formating */
 .header-nav {
@@ -94,11 +101,13 @@ li {
 .head-contacts {
     margin-left: auto;
     display: flex;
+    
 }
+
 
 .head-contacts .item:not(:last-child) {
     margin-right: 50px;
-
+    
 }
 
 .header-formating {
@@ -129,6 +138,8 @@ li {
    
 /* Head contacts */
 .head-contacts-link {
+    display: inline-flex;
+    align-items: center;
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
@@ -141,6 +152,16 @@ li {
 .head-contacts-link:hover,
 .head-contacts-link:focus {
     color: var(--selected-color);
+}
+
+
+.contact-icon {
+    fill: var(--links-gray);
+    margin-right: 10px;
+}
+.head-contacts-link:hover .contact-icon,
+.head-contacts-link:focus .contact-icon {
+    fill: var(--selected-color);
 }
 
 .header-border {
@@ -250,6 +271,47 @@ h1 {
     margin-top: 30px;
 }
 
+.specification-list .item-details::before {
+    display: block;
+    content: '';  
+    height: 120px;
+    background-image: url("../images/satellite.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+}
+.specification-list .item-punctuality::before {
+    display: block;
+    content: '';
+    height: 120px;
+    background-image: url("../images/clock.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+}
+
+.specification-list .item-planing::before {
+    display: block;
+    content: '';
+    height: 120px;
+    background-image: url("../images/diagram.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+}
+.specification-list .item-technology::before {
+    display: block;
+    content: '';
+    height: 120px;
+    background-image: url("../images/astronaut.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+}
 /* Field of activity section Index */
 .field-activity-section {
     margin-bottom: 94px;
@@ -279,6 +341,7 @@ h1 {
     background-color: #F5F4FA;
 }
 .staff-list {
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -299,10 +362,48 @@ h1 {
 }
 
 .staff-container {
+    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.social-list {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+}
+
+.social-links:hover {
+    background-color: var(--selected-color);
+}
+.social-links:hover .social-icon {
+    fill: #FFFFFF;
+}
+
+.social-icon {
+    display: inline-flex;
+    
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    fill: #AFB1B8;
+    
 }
 
 
