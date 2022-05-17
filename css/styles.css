@@ -236,7 +236,7 @@ h1 {
 .secondary-header {
     margin-bottom: 50px;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.16;
     text-align: center;
     color: var(--main-black-color);
 }
@@ -263,55 +263,27 @@ h1 {
 }
 
 .specification-list .item {
+   
     max-width: 270px;
-
+    
 }
 
 .specification-list .item:nth-child(n+5) {
     margin-top: 30px;
 }
 
-.specification-list .item-details::before {
-    display: block;
-    content: '';  
+
+.spec-container {
+    display: flex;
     height: 120px;
-    background-image: url("../images/satellite.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
     margin-bottom: 30px;
-}
-.specification-list .item-punctuality::before {
-    display: block;
-    content: '';
-    height: 120px;
-    background-image: url("../images/clock.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
-    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+    background: #F5F4FA;
+    border-radius: 4px;
 }
 
-.specification-list .item-planing::before {
-    display: block;
-    content: '';
-    height: 120px;
-    background-image: url("../images/diagram.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
-    margin-bottom: 30px;
-}
-.specification-list .item-technology::before {
-    display: block;
-    content: '';
-    height: 120px;
-    background-image: url("../images/astronaut.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #F5F4FA;
-    margin-bottom: 30px;
-}
+
 /* Field of activity section Index */
 .field-activity-section {
     margin-bottom: 94px;
@@ -388,16 +360,17 @@ h1 {
     height: 40px;
 }
 
-.social-links:hover {
+.social-links:hover,
+.social-links:focus {
     background-color: var(--selected-color);
 }
-.social-links:hover .social-icon {
+.social-links:hover .social-icon,
+.social-links:focus .social-icon {
     fill: #FFFFFF;
 }
 
 .social-icon {
     display: inline-flex;
-    
     margin: 0;
     padding: 0;
     width: 20px;
@@ -405,7 +378,34 @@ h1 {
     fill: #AFB1B8;
     
 }
+.clients-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.clients-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+.clients-icon {
+    width: 106px;
+    height: 60px;
+    fill: #AFB1B8;;
+}
+.clients-links:hover .clients-icon,
+.clients-links:focus .clients-icon {
+    fill: var(--selected-color);
+}
+.clients-links:hover,
+.clients-links:focus {
+    border: 1px solid var(--selected-color);
+}
 
 /* Filter Buttons styles */
 
@@ -481,9 +481,16 @@ gap: 30px;
     border-bottom: 1px solid #EEEEEE;
 }
 
+
 /* Cards in Porfolio */
 .portfolio-cards {
 box-sizing: border-box;
+}
+.portfolio-cards:hover,
+.portfolio-cards:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-cards a {
@@ -516,6 +523,63 @@ box-sizing: border-box;
 }
 .footer-text-normal {
     font-style: normal;
+}
+
+.footer-formating {
+    display: flex;
+    
+    
+   
+}
+.footer-soc-list {
+    display: flex;
+    width: 206px;
+    height: 80px;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+    margin-top: 10px;
+    
+   
+}
+.footer-soc-container {
+    display: flex;
+    margin-top: 20px;
+}
+
+.footer-soc-container li:not(:last-child) {
+    margin-right: 10px;
+}
+
+/* .footer-soc-container:not(:last-child) {
+    margin-right: 50px;
+} */
+.social-links-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+.social-links-footer:hover,
+.social-links-footer:focus {
+    background-color: var(--selected-color);
+}
+.social-icon-footer {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    fill: #FFFFFF;
+}
+.text-connect {
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 /* Adress */
