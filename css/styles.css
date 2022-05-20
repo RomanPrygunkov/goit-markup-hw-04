@@ -296,6 +296,7 @@ h1 {
     justify-content: space-between;
 }
 
+
 .activity-list .item:nth-child(n+4) {
     margin-top: 30px;
 }
@@ -303,6 +304,7 @@ h1 {
 /* Staff section Index */
 
 .staff-style {
+    background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
 }
@@ -328,17 +330,18 @@ h1 {
 
 /* Fonts for p Section 4 */
 .staff-descript {
-    padding-top: 10px;
+    margin-top: 10px;
     font-weight: 400;
     font-size: 16px;
 }
 
 .staff-container {
+    max-width: 270px;
     text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 32px;
-    padding-right: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 32px;
+    margin-right: 32px; 
 }
 
 .social-list {
@@ -356,8 +359,8 @@ h1 {
     border-radius: 50%;
     padding: 0;
     margin: 0;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
 }
 
 .social-links:hover,
@@ -483,15 +486,22 @@ gap: 30px;
 
 
 /* Cards in Porfolio */
+
 .portfolio-cards {
 box-sizing: border-box;
+
 }
-.portfolio-cards:hover,
-.portfolio-cards:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-    0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
+.portfolio-cards-link {
+    display: block;
 }
+.portfolio-cards-link:hover,
+.portfolio-cards-link:focus {
+box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
 
 .portfolio-cards a {
     text-decoration: none;
@@ -512,6 +522,11 @@ box-sizing: border-box;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
 }
+.footer-contacts-link:last-child {
+    margin-top: 9px;
+   
+}
+
 
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
@@ -561,8 +576,8 @@ box-sizing: border-box;
     border-radius: 50%;
     padding: 0;
     margin: 0;
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     background-color: rgba(255, 255, 255, 0.1);
 }
 .social-links-footer:hover,
